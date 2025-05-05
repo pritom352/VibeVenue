@@ -6,7 +6,7 @@ const Events = ({ events }) => {
 
   return (
     <div className=" my-20">
-      <div class="divider text-4xl font-bold italic text-shadow-lg">
+      <div className="divider text-4xl font-bold italic text-shadow-lg">
         <span className=" text-orange-400">Upcoming</span> Events
       </div>
       <div className=" grid grid-cols-3 gap-8">

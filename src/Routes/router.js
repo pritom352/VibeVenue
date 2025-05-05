@@ -5,6 +5,7 @@ import MyProfile from "../Pages/MyProfile";
 import AuthLayout from "../Layout/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import EventDetails from "../Pages/EventDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/myProfile",
         Component: MyProfile,
+      },
+      {
+        path: "/eventDetails/:id",
+        Component: EventDetails,
+        loader: () => fetch("/event.json"),
       },
     ],
   },
