@@ -7,7 +7,9 @@ const HomeLoayout = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <Outlet></Outlet>
+      <div className="  px-25  bg-amber-100">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );
