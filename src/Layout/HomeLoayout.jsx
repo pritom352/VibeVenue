@@ -7,7 +7,7 @@ const HomeLoayout = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <div className="  px-25  bg-amber-100">
+      <div className="  px-25  bg-[#F8F8FF]">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>

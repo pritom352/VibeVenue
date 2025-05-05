@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Innovators Summit 2025",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Conference",
+    "date": "2025-06-15",
+    "location": "Dhaka Convention Center, Dhaka",
+    "entry_fee": "500 BDT",
+    "description": "The Tech Innovators Summit 2025 is a premier technology conference designed for professionals, students, and startups. The event will cover topics including artificial intelligence, cybersecurity, and sustainable tech innovations. Keynote speeches will be delivered by international industry leaders from Google, bKash, and local tech startups. Breakout sessions, live product demos, and a startup pitch competition will be included. Participants will receive digital certificates, access to session recordings, and networking opportunities. Registration closes on June 5th. Lunch and refreshments included."
+  },
+  {
+    "id": 2,
+    "name": "Creative Writing Workshop",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Workshop",
+    "date": "2025-07-05",
+    "location": "British Council, Dhaka",
+    "entry_fee": "150 BDT",
+    "description": "This full-day creative writing workshop is ideal for aspiring authors, bloggers, and students. The program includes guided writing sessions, feedback circles, and a special talk by a local novelist. Topics include storytelling techniques, narrative structure, and editing tips. Participants are required to bring a notebook or laptop. Tea and snacks will be provided. The top three participants will get a chance to publish their work in a local magazine. Pre-registration is mandatory, and the last date is June 30th."
+  },
+  {
+    "id": 3,
+    "name": "National Youth Football Championship",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Sports",
+    "date": "2025-08-20",
+    "location": "Bangabandhu National Stadium, Dhaka",
+    "entry_fee": "Free",
+    "description": "Organized by the National Sports Federation, this week-long tournament will feature under-21 teams from all 8 divisions. The event includes knockout rounds, a skills challenge, and an award ceremony for the top players. Entry is free for all spectators, and food stalls and merchandise booths will be available on-site. Coaches, scouts, and media will be in attendance. Safety protocols and first-aid services will be strictly maintained. Opening match starts at 9:00 AM on August 20th."
+  },
+  {
+    "id": 4,
+    "name": "Modern Art Expo",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Art Exhibition",
+    "date": "2025-09-15",
+    "location": "National Art Gallery, Dhaka",
+    "entry_fee": "100 BDT",
+    "description": "The Modern Art Expo is a five-day event celebrating contemporary Bangladeshi art. Featuring over 100 artworks including paintings, sculptures, and installations, the event offers guided tours, interactive art corners, and live painting sessions. Renowned artists such as Rokeya Sultana and Rashid Amin will be present. Workshops for children and students will run daily. Photography is allowed. Tickets can be bought online or at the gate. Open from 10:00 AM to 7:00 PM daily."
+  },
+  {
+    "id": 5,
+    "name": "Digital Health Conference",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Conference",
+    "date": "2025-11-18",
+    "location": "Khulna Medical College Auditorium, Khulna",
+    "entry_fee": "Free",
+    "description": "This conference focuses on innovations in healthcare technology, including telemedicine, digital diagnostics, and wearable health devices. Keynote speakers include doctors, engineers, and representatives from WHO and UNICEF. Panel discussions will explore the challenges of rural healthcare and digital infrastructure. Free health checkups will be available at the venue. Certificates of participation will be emailed. Registration is required but entry is free for all attendees including students and medical staff."
+  },
+  {
+    "id": 6,
+    "name": "Dhaka Street Music Festival",
+    "thumbnail": "https://i.ibb.co.com/nqmyJmnd/download.jpg",
+    "category": "Music",
+    "date": "2025-12-01",
+    "location": "Hatirjheel Amphitheater, Dhaka",
+    "entry_fee": "250 BDT",
+    "description": "Experience the vibrant energy of Dhaka’s local music scene at this open-air festival featuring rock, folk, and fusion bands. The event will host over 20 live performances, food trucks, art stalls, and a firework show to close the night. Family-friendly, with separate seating for senior citizens. Gates open at 3:00 PM and the first act starts at 4:00 PM. Early bird tickets available online. Limited seating available, so early arrival is advised."
+  }
+]
