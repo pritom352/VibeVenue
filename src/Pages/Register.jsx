@@ -1,7 +1,65 @@
 import React from "react";
+import { FaGoogle } from "react-icons/fa";
+import { Link } from "react-router";
 
 const Register = () => {
-  return <div>this is register</div>;
+  return (
+    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-20">
+      <h2 className=" text-3xl font-bold mx-auto  mt-3 text-orange-400  text-shadow-lg ">
+        Register <span className=" text-black ">Now</span>
+      </h2>
+      <div className="card-body">
+        <fieldset className="fieldset">
+          {/* Name */}
+          <label className="label">Name</label>
+          <input
+            type="text"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            placeholder="Name"
+          />
+          {/* Email */}
+          <label className="label">Email</label>
+          <input
+            type="email"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            placeholder="Email"
+          />
+          {/* Photo URL */}
+          <label className="label">Photo URL</label>
+          <input
+            type="text"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            placeholder="Photo URL"
+          />
+          {/* Password */}
+          <label className="label">Password</label>
+          <input
+            type="password"
+            className="input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            placeholder="Password"
+          />
+          {/* <div>
+            <a className="link link-hover">Forgot password?</a>
+          </div> */}
+          <button className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-extrabold mt-4">
+            Register
+          </button>
+          <button className=" btn   gap-3 rounded-md  bg-black text-white  font-semibold py-2.5 hover:bg-orange-400 hover:border-none hover:font-bold ">
+            <FaGoogle size={24} /> Login With Google Login
+          </button>
+          <p className=" mt-1 ">
+            Already have an account ?
+            <Link
+              className=" text-blue-500 hover:text-orange-400"
+              to="/auth/login"
+            >
+              Login
+            </Link>
+          </p>
+        </fieldset>
+      </div>
+    </div>
+  );
 };
 
 export default Register;

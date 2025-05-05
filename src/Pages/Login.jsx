@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Login = () => {
@@ -28,6 +29,9 @@ const Login = () => {
           </div>
           <button className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-extrabold mt-4">
             Login
+          </button>
+          <button className=" btn   gap-3 rounded-md  bg-black text-white  font-semibold py-2.5 hover:bg-orange-400 hover:border-none hover:font-bold ">
+            <FaGoogle size={24} /> Login With Google Login
           </button>
           <p className=" mt-1 ">
             Don't have an account ?{" "}
