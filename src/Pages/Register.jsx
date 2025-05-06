@@ -1,62 +1,104 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
+import { AuthContext } from "../Provider/AuthContext";
 
 const Register = () => {
+  const { register, googleLogin } = useContext(AuthContext);
+  const handelRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const photoURL = e.target.photoURL.value;
+    const password = e.target.password.value;
+    register(email, password)
+      .then((result) => {
+        // Signed up
+        const user = result.user;
+        console.log(user);
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorCode, errorMessage);
+        // ..
+      });
+  };
+  const handelGoogleLogin = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto mt-20">
       <h2 className=" text-3xl font-bold mx-auto  mt-3 text-orange-400  text-shadow-lg ">
         Register <span className=" text-black ">Now</span>
       </h2>
       <div className="card-body">
-        <fieldset className="fieldset">
+        <form onSubmit={handelRegister} className="fieldset">
           {/* Name */}
           <label className="label">Name</label>
           <input
             type="text"
-            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            name="name"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
             placeholder="Name"
           />
           {/* Email */}
           <label className="label">Email</label>
           <input
             type="email"
-            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            name="email"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
             placeholder="Email"
           />
           {/* Photo URL */}
           <label className="label">Photo URL</label>
           <input
             type="text"
-            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            name="photoURL"
+            className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
             placeholder="Photo URL"
           />
           {/* Password */}
           <label className="label">Password</label>
           <input
             type="password"
-            className="input text-black font-semibold focus:bg-orange-400 focus:text-white"
+            name="password"
+            className="input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
             placeholder="Password"
           />
           {/* <div>
             <a className="link link-hover">Forgot password?</a>
           </div> */}
-          <button className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-extrabold mt-4">
+          <button
+            type="submit"
+            className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-extrabold mt-4"
+          >
             Register
           </button>
-          <button className=" btn   gap-3 rounded-md  bg-black text-white  font-semibold py-2.5 hover:bg-orange-400 hover:border-none hover:font-bold ">
-            <FaGoogle size={24} /> Login With Google Login
-          </button>
-          <p className=" mt-1 ">
-            Already have an account ?
-            <Link
-              className=" text-blue-500 hover:text-orange-400"
-              to="/auth/login"
-            >
-              Login
-            </Link>
-          </p>
-        </fieldset>
+        </form>
+        <button
+          onClick={handelGoogleLogin}
+          className=" btn   gap-3 rounded-md  bg-black text-white  font-semibold py-2.5 hover:bg-orange-400 hover:border-none hover:font-bold "
+        >
+          <FaGoogle size={24} /> Login With Google Login
+        </button>
+        <p className=" mt-1 ">
+          Already have an account ?
+          <Link
+            className=" text-blue-500 hover:text-orange-400"
+            to="/auth/login"
+          >
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

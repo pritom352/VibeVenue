@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
 import Details from "../Components/Details";
 import RigntAside from "../Components/RigntAside";
+import { AuthContext } from "../Provider/AuthContext";
 
 const EventDetails = () => {
+  // const a = useContext(AuthContext);
+  // console.log(a);
   const { id } = useParams();
   const data = useLoaderData();
   const details = data.find((data) => data.id == id);
-  console.log(details);
+  // console.log(details);
   const {
     title,
     time,
@@ -28,11 +31,11 @@ const EventDetails = () => {
       {/* <h1 className=" text-5xl font-bold italic text-center text-orange-400 text-shadow-2xs">
         Event <span className="text-black">Details</span>
       </h1> */}
-      <div className=" flex justify-between gap-15 mx-20">
+      <div className=" flex justify-between gap-20 mx-20">
         <main className=" w-2/3 shadow-2xl">
           <Details thumbnail={thumbnail} description={description}></Details>
         </main>
-        <aside className=" border w-1/3">
+        <aside className="  w-1/3">
           <RigntAside
             name={title}
             duration={duration}
