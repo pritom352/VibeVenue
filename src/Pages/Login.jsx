@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
 
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
+
   const handelLogin = (e) => {
     e.preventDefault();
     // console.log("hello world");
@@ -16,7 +20,7 @@ const Login = () => {
         // Signed in
         const user = result.user;
         toast("Login successful!");
-        // ...
+        navigate(location?.state || "/");
       })
       .catch((error) => {
         // const errorCode = error.code;
@@ -28,6 +32,7 @@ const Login = () => {
     googleLogin()
       .then((result) => {
         console.log(result);
+        navigate(location?.state || "/");
       })
       .catch((error) => {
         console.log(error);

@@ -14,18 +14,23 @@ import { ToastContainer } from "react-toastify";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loader, setloader] = useState(true);
   console.log(user);
   const provider = new GoogleAuthProvider();
   const register = (email, password) => {
+    setloader(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const logIn = (email, password) => {
+    setloader(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const googleLogin = () => {
+    setloader(true);
     return signInWithPopup(auth, provider);
   };
   const logOut = () => {
+    setloader(true);
     return signOut(auth);
   };
 
@@ -36,6 +41,7 @@ const AuthProvider = ({ children }) => {
       //   currentUser
       // );
       setUser(currentUser);
+      setloader(false);
     });
     return () => {
       unSubscribe();
@@ -48,6 +54,7 @@ const AuthProvider = ({ children }) => {
     googleLogin,
     logOut,
     user,
+    loader,
   };
   return (
     <div>
