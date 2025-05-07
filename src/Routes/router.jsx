@@ -6,11 +6,15 @@ import AuthLayout from "../Layout/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import EventDetails from "../Pages/EventDetails";
+import ErrorPage from "../Pages/ErrorPage";
+import PrivetRoute from "../Provider/PrivetRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLoayout,
+    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -23,8 +27,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/eventDetails/:id",
-        Component: EventDetails,
+        element: (
+          <PrivetRoute>
+            <EventDetails></EventDetails>
+          </PrivetRoute>
+        ),
         loader: () => fetch("/event.json"),
+        // errorElement: <ErrorPage></ErrorPage>,
       },
     ],
   },

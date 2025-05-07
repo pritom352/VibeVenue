@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
@@ -14,13 +15,13 @@ const Login = () => {
       .then((result) => {
         // Signed in
         const user = result.user;
-        console.log(user);
+        toast("Login successful!");
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage, errorCode);
+        toast(`${errorMessage}`);
       });
   };
   const handelGoogleLogin = () => {

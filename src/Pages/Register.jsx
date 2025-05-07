@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { register, googleLogin } = useContext(AuthContext);
@@ -15,24 +16,25 @@ const Register = () => {
       .then((result) => {
         // Signed up
         const user = result.user;
-        console.log(user);
+        // console.log(user);
+        toast("Register successful!");
 
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode, errorMessage);
+        toast(`${errorMessage}`);
         // ..
       });
   };
   const handelGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-        console.log(result);
+        toast("Logout successful!");
       })
       .catch((error) => {
-        console.log(error);
+        toast(`${error}`);
       });
   };
   return (

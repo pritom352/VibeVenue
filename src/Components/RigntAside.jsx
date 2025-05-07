@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const RigntAside = ({
   title,
@@ -51,7 +52,7 @@ const RigntAside = ({
           Reserve <span className=" text-black ">Seat</span>
         </h2>
         <div className="card-body pt-0 mt-3">
-          <form>
+          <>
             <label className="label">Name</label>
             <input
               type="text"
@@ -65,10 +66,13 @@ const RigntAside = ({
               placeholder="Email"
             />
 
-            <button className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-bold mt-4">
+            <button
+              onClick={() => toast("Seat comfrom!")}
+              className="btn btn-neutral hover:bg-orange-400 hover:border-none hover:font-bold mt-4"
+            >
               Reserve Seat
             </button>
-          </form>
+          </>
         </div>
       </div>
     </div>

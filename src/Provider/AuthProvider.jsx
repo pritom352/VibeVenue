@@ -9,6 +9,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { auth } from "../FireBase/fireBase-config";
+import { ToastContainer } from "react-toastify";
 // import { createUserWithEmailAndPassword } from "firebase/auth/cordova";
 
 const AuthProvider = ({ children }) => {
@@ -49,7 +50,10 @@ const AuthProvider = ({ children }) => {
     user,
   };
   return (
-    <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
+    <div>
+      <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
+      <ToastContainer />
+    </div>
   );
 };
 

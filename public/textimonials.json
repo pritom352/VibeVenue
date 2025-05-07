@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Rakib Hasan",
+    "review": "The tech event was super helpful and well-organized! I learned a lot about the latest innovations in AI and got the chance to network with industry experts.",
+    "rating": 5,
+    "image": "https://i.pravatar.cc/40?img=1"
+  },
+  {
+    "name": "Farhan Ahmed",
+    "review": "The sports event was thrilling! Had a great time with friends. The coordination was flawless and the audience was full of energy.",
+    "rating": 5,
+    "image": "https://i.pravatar.cc/40?img=3"
+  },
+  {
+    "name": "Tania Akter",
+    "review": "The workshop on photography was very informative. The trainer explained everything in detail and gave us hands-on experience with DSLR cameras.",
+    "rating": 4,
+    "image": "https://i.pravatar.cc/40?img=4"
+  },
+  {
+    "name": "Sajid Hossain",
+    "review": "Nice location and good management. Waiting for the next one! The event had a very friendly environment and helpful volunteers.",
+    "rating": 4,
+    "image": "https://i.pravatar.cc/40?img=5"
+  },
+  {
+    "name": "Meherun Nesa",
+    "review": "Art lovers must attend such exhibitions. Great experience! The variety of paintings and sculptures displayed was truly inspiring.",
+    "rating": 5,
+    "image": "https://i.pravatar.cc/40?img=6"
+  },
+  {
+    "name": "Anika Rahman",
+    "review": "Amazing cultural program. Felt really connected to the roots. The traditional music and dance performances were the highlights of the evening.",
+    "rating": 5,
+    "image": "https://i.pravatar.cc/40?img=7"
+  },
+  {
+    "name": "Zahidul Islam",
+    "review": "Well-structured conference with knowledgeable speakers. Each session was packed with useful insights and real-world applications.",
+    "rating": 4,
+    "image": "https://i.pravatar.cc/40?img=8"
+  }
+]

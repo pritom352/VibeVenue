@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
 import "./NavBar.css";
 import { AuthContext } from "../Provider/AuthContext";
+import { toast } from "react-toastify";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -19,10 +20,12 @@ const NavBar = () => {
   const handelLogOut = () => {
     logOut()
       .then(() => {
-        alert("sign out succesfull");
+        // alert("sign out succesfull");
+        toast("Logout successful!");
       })
       .catch((error) => {
-        alert(error);
+        // alert(error);
+        toast(`${error}`);
       });
   };
   return (
