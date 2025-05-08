@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
+// import updateProfile from "firebase/auth";
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
@@ -7,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../FireBase/fireBase-config";
 import { ToastContainer } from "react-toastify";
@@ -33,6 +35,10 @@ const AuthProvider = ({ children }) => {
     setloader(true);
     return signOut(auth);
   };
+  const profileUpdate = (UpdateData) => {
+    return updateProfile(auth.currentUser, UpdateData);
+    // console.log(photoURL);
+  };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -54,7 +60,9 @@ const AuthProvider = ({ children }) => {
     googleLogin,
     logOut,
     user,
+    setUser,
     loader,
+    profileUpdate,
   };
   return (
     <div>

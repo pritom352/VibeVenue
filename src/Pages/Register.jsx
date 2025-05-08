@@ -5,18 +5,27 @@ import { AuthContext } from "../Provider/AuthContext";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { register, googleLogin } = useContext(AuthContext);
+  const { register, googleLogin, profileUpdate, setUser } =
+    useContext(AuthContext);
   const handelRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
-    const photoURL = e.target.photoURL.value;
+    const photo = e.target.photoURL.value;
     const password = e.target.password.value;
     register(email, password)
       .then((result) => {
         // Signed up
         const user = result.user;
         // console.log(user);
+        profileUpdate({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((error) => {
+            console.log(error);
+            setUser(user);
+          });
         toast("Register successful!");
 
         // ...
