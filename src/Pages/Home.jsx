@@ -7,14 +7,13 @@ import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const events = useLoaderData();
-  // console.log(events);
   const [textimonials, setTextimonials] = useState([]);
   useEffect(() => {
     fetch("textimonials.json")
       .then((rsc) => rsc.json())
       .then((data) => setTextimonials(data));
   }, []);
-  console.log(textimonials);
+
   return (
     <div>
       <Helmet>

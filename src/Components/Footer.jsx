@@ -68,7 +68,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-500">
-        © VibeVenue. All rights reserved.
+        VibeVenue. All rights reserved.
       </div>
     </footer>
   );

@@ -25,11 +25,9 @@ const NavBar = () => {
   const handelLogOut = () => {
     logOut()
       .then(() => {
-        // alert("sign out succesfull");
         toast("Logout successful!");
       })
       .catch((error) => {
-        // alert(error);
         toast(`${error}`);
       });
   };
@@ -45,13 +43,12 @@ const NavBar = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              {" "}
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
+              />
             </svg>
           </div>
           <ul
@@ -75,7 +72,7 @@ const NavBar = () => {
               <img
                 className="max-w-[50px] max-h-[50px] rounded-full cursor-pointer"
                 src={user.photoURL}
-                alt="User Profile"
+                alt="UserProfile"
               />
               <div className="absolute  mb-2 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded hidden group-hover:block ">
                 {user.displayName}

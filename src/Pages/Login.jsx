@@ -8,23 +8,19 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
   const location = useLocation();
-  // console.log(location);
   const navigate = useNavigate();
 
   const handelLogin = (e) => {
     e.preventDefault();
-    // console.log("hello world");
     const email = e.target.email.value;
     const password = e.target.password.value;
     logIn(email, password)
       .then((result) => {
-        // Signed in
         const user = result.user;
         toast("Login successful!");
         navigate(location?.state || "/");
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
         toast(`${errorMessage}`);
       });
@@ -32,11 +28,11 @@ const Login = () => {
   const handelGoogleLogin = () => {
     googleLogin()
       .then((result) => {
-        console.log(result);
         navigate(location?.state || "/");
       })
       .catch((error) => {
-        console.log(error);
+        const errorMessage = error.message;
+        toast(`${errorMessage}`);
       });
   };
   return (
@@ -54,13 +50,17 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              required
+              autoComplete="email"
               className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
               placeholder="Email"
             />
             <label className="label">Password</label>
             <input
               type="password"
+              required
               name="password"
+              autoComplete="new-password"
               className="input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
               placeholder="Password"
             />

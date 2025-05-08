@@ -2,8 +2,6 @@ import React from "react";
 import Card from "./Card";
 
 const Events = ({ events }) => {
-  //   console.log(events);
-
   return (
     <div className=" my-20">
       <div className="divider text-2xl md:text-3xl  lg:text-4xl font-bold mb-10 italic text-shadow-lg">

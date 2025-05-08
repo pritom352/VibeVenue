@@ -58,12 +58,14 @@ const RigntAside = ({
               type="text"
               className=" input text-black font-semibold focus:bg-orange-400 focus:text-white"
               placeholder=" Name"
+              required
             />
             <label className="label">Email</label>
             <input
               type="email"
               className="input text-black font-semibold focus:bg-orange-400 focus:text-white"
               placeholder="Email"
+              required
             />
 
             <button

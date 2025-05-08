@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 const Faq = () => {
   const data = useLoaderData();
-  console.log(data);
+
   return (
     <div>
       <Helmet>
@@ -15,11 +15,11 @@ const Faq = () => {
       </Helmet>
       <NavBar></NavBar>
       <div className="px-10 md:px-15 lg:px-25">
-        <h1 className=" text-xl md:text-2xl lg:text-3xl md:text-4xl lg:text-5xl text-center font-bold italic my-10">
+        <h1 className="  text-2xl md:text-3xl  lg:text-5xl text-center font-bold italic my-10">
           <span className="text-orange-400 ">Frequently</span> Asked Questions
         </h1>
         {data.map((data) => (
-          <FaqCard data={data}></FaqCard>
+          <FaqCard key={data.id} data={data}></FaqCard>
         ))}
       </div>
       <Footer></Footer>

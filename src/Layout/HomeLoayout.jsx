@@ -6,8 +6,6 @@ import Footer from "../Components/Footer";
 const HomeLoayout = () => {
   return (
     <div>
-      {/* {import.meta.env.VITE_SOME_KEY} */}
-
       <NavBar></NavBar>
       <div className=" px-10 md:px-15 lg:px-25 min-h-[calc(100vh-350px)]  ">
         <Outlet></Outlet>

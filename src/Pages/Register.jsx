@@ -17,8 +17,8 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const photo = e.target.photoURL.value;
-    const password = e.target.password.value;
-    const passwordRegExp = /.{6,}(?=.*[a-z])(?=.*[A-Z])/;
+    const password = e.target.currentPassword.value;
+    const passwordRegExp = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (passwordRegExp.test(password) === false) {
       toast(
         "Password must be at least Six characters includeing  one upper and lower case."
@@ -27,15 +27,14 @@ const Register = () => {
     }
     register(email, password)
       .then((result) => {
-        // Signed up
         const user = result.user;
-        // console.log(user);
+
         profileUpdate({ displayName: name, photoURL: photo })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
           })
           .catch((error) => {
-            console.log(error);
+            toast(error);
             setUser(user);
           });
 
@@ -76,6 +75,7 @@ const Register = () => {
             <label className="label">Name</label>
             <input
               type="text"
+              required
               name="name"
               className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
               placeholder="Name"
@@ -84,6 +84,7 @@ const Register = () => {
             <label className="label">Email</label>
             <input
               type="email"
+              required
               name="email"
               className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
               placeholder="Email"
@@ -92,6 +93,8 @@ const Register = () => {
             <label className="label">Photo URL</label>
             <input
               type="text"
+              autoComplete="off"
+              required
               name="photoURL"
               className=" input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
               placeholder="Photo URL"
@@ -101,7 +104,9 @@ const Register = () => {
             <div className=" relative">
               <input
                 type={show ? "text" : "password"}
-                name="password"
+                name="currentPassword"
+                autoComplete="new-password"
+                required
                 className="input text-black font-semibold focus:bg-orange-400 focus:text-white w-full"
                 placeholder="Password"
               />

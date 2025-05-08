@@ -9,14 +9,12 @@ import EventDetails from "../Pages/EventDetails";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivetRoute from "../Provider/PrivetRoute";
 import Faq from "../Pages/Faq";
-import { ClockLoader } from "react-spinners";
 import Loader from "../Components/Loader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLoayout,
-    // errorElement: <ErrorPage></ErrorPage>,
     errorElement: <ErrorPage />,
     hydrateFallbackElement: <Loader></Loader>,
     children: [
