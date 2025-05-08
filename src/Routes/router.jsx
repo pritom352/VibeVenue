@@ -8,6 +8,9 @@ import Register from "../Pages/Register";
 import EventDetails from "../Pages/EventDetails";
 import ErrorPage from "../Pages/ErrorPage";
 import PrivetRoute from "../Provider/PrivetRoute";
+import Faq from "../Pages/Faq";
+import { ClockLoader } from "react-spinners";
+import Loader from "../Components/Loader";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +18,13 @@ const router = createBrowserRouter([
     Component: HomeLoayout,
     // errorElement: <ErrorPage></ErrorPage>,
     errorElement: <ErrorPage />,
+    hydrateFallbackElement: <Loader></Loader>,
     children: [
       {
         path: "/",
         Component: Home,
         loader: () => fetch("/event.json"),
+        hydrateFallbackElement: <Loader></Loader>,
       },
       {
         path: "/myProfile",
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: () => fetch("/event.json"),
-        // errorElement: <ErrorPage></ErrorPage>,
+        hydrateFallbackElement: <Loader></Loader>,
       },
     ],
   },
@@ -50,6 +55,16 @@ const router = createBrowserRouter([
         Component: Register,
       },
     ],
+  },
+  {
+    path: "/faq",
+    element: (
+      <PrivetRoute>
+        <Faq></Faq>
+      </PrivetRoute>
+    ),
+    loader: () => fetch("/FAQ.json"),
+    hydrateFallbackElement: <Loader></Loader>,
   },
 ]);
 export default router;

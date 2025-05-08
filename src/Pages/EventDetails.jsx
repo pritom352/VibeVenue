@@ -3,14 +3,13 @@ import { useLoaderData, useParams } from "react-router";
 import Details from "../Components/Details";
 import RigntAside from "../Components/RigntAside";
 import { AuthContext } from "../Provider/AuthContext";
+import { Helmet } from "react-helmet-async";
 
 const EventDetails = () => {
-  // const a = useContext(AuthContext);
-  // console.log(a);
   const { id } = useParams();
   const data = useLoaderData();
   const details = data.find((data) => data.id == id);
-  // console.log(details);
+
   const {
     title,
     time,
@@ -25,17 +24,18 @@ const EventDetails = () => {
 
   return (
     <div>
-      <div className="divider text-5xl font-bold italic text-shadow-lg my-20 mx-15">
+      <Helmet>
+        <title>Event Details</title>
+      </Helmet>
+      <div className="divider text-2xl md:text-3xl lg:text-5xl font-bold italic text-shadow-lg my-10 lg:my-20 lg:mx-15">
         <span className=" text-orange-400">Event</span> Details
       </div>
-      {/* <h1 className=" text-5xl font-bold italic text-center text-orange-400 text-shadow-2xs">
-        Event <span className="text-black">Details</span>
-      </h1> */}
-      <div className=" flex justify-between gap-20 mx-20">
-        <main className=" w-2/3 shadow-2xl">
+
+      <div className=" flex flex-col lg:flex-row justify-between gap-20 lg:mx-20">
+        <main className=" flex-grow bg-amber-100 lg:w-2/3 shadow-2xl ">
           <Details thumbnail={thumbnail} description={description}></Details>
         </main>
-        <aside className="  w-1/3">
+        <aside className=" flex-grow  lg:w-1/3">
           <RigntAside
             name={title}
             duration={duration}

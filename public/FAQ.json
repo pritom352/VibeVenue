@@ -1,0 +1,42 @@
+[
+  {
+    "question": "How can I register for an event?",
+    "answer": "To register, log in to your account,  click the 'Login ' button on navbar."
+  },
+  {
+    "question": "Can I cancel my event registration?",
+    "answer": "Yes, you can cancel your registration up to 24 hours before the event starts from your profile section."
+  },
+  {
+    "question": "Are all events free to attend?",
+    "answer": "No, some events may require a registration fee. Please check the event details page for pricing."
+  },
+  {
+    "question": "How do I leave a review after attending an event?",
+    "answer": "After the event, go to your profile and find the attended event. There you'll see an option to leave a review."
+  },
+  {
+    "question": "Can I organize my own event on this platform?",
+    "answer": "Currently, only authorized users can organize events. Contact the admin if you’re interested in hosting one."
+  },
+  {
+    "question": "How do I find events happening near me?",
+    "answer": "Use the search or filter tools on the home page to explore events by location or category."
+  },
+  {
+    "question": "Do I need an account to browse events?",
+    "answer": "No, you can view events without logging in, but you'll need an account to register or leave feedback."
+  },
+  {
+    "question": "What types of events are listed on this platform?",
+    "answer": "We list conferences, workshops, sports events, art exhibitions, cultural festivals, and more."
+  },
+  {
+    "question": "How are events rated on the platform?",
+    "answer": "After attending, users can rate and review events. The average rating is displayed on the event page."
+  },
+  {
+    "question": "What if an event gets canceled?",
+    "answer": "If an event is canceled, you'll receive a notification and any applicable refunds will be processed automatically."
+  }
+]

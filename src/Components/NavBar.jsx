@@ -14,6 +14,11 @@ const NavBar = () => {
       <NavLink className="hover:text-orange-500" to="/myProfile">
         My Profile
       </NavLink>
+      {user && (
+        <NavLink className="hover:text-orange-500" to="/faq">
+          FAQ
+        </NavLink>
+      )}
     </div>
   );
 
@@ -56,15 +61,14 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Jasmine</a>
+        <a className="btn btn-ghost text-2xl font-bold italic">
+          <span className=" text-orange-400">Vibe</span>Venue
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        {/* <button onClick={handelLogOut} className="btn">
-          Log Out
-        </button> */}
         {user ? (
           <>
             <div className="relative group mr-2">
@@ -79,7 +83,7 @@ const NavBar = () => {
             </div>
             <button
               onClick={handelLogOut}
-              className="relative px-5 py-3 overflow-hidden font-medium  bg-gray-100 border border-orange-400 rounded-lg shadow-inner group"
+              className="relative px-2 md:px-3 lg:px-5 py-1 md:py-2 lg:py-3 overflow-hidden font-medium  bg-gray-100 border border-orange-400 rounded-lg shadow-inner group"
             >
               <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-orange-400 group-hover:w-full ease"></span>
               <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-orange-400 group-hover:w-full ease"></span>

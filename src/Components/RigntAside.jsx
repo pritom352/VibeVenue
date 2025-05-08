@@ -47,7 +47,7 @@ const RigntAside = ({
           </div>
         </div>
       </div>
-      <div className="card     shadow-2xl  mt-12 ">
+      <div className="card     shadow-2xl  mt-12 mb-10 lg:mb-0 ">
         <h2 className=" text-3xl font-bold mx-auto  mt-3 text-orange-400  text-shadow-lg ">
           Reserve <span className=" text-black ">Seat</span>
         </h2>

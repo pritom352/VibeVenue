@@ -67,7 +67,11 @@ const Card = ({ event }) => {
   return (
     <div className=" transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl bg-amber-50 p-2 rounded-2xl shadow-lg shadow-black">
       <div className="overflow-hidden rounded-2xl">
-        <img className="w-full h-64  rounded-2xl" src={thumbnail} alt={name} />
+        <img
+          className=" lg:w-full lg:h-64  rounded-2xl"
+          src={thumbnail}
+          alt={name}
+        />
       </div>
       <div className="bg-white rounded-2xl p-3 mt-6 shadow-lg space-y-2">
         <h1 className="font-semibold">Name: {name}</h1>
@@ -96,7 +100,7 @@ const Card = ({ event }) => {
             </svg>
           </span>
           <span className="absolute flex items-center justify-center w-full h-full text-black font-bold transition-all duration-300 transform group-hover:translate-x-full ease">
-            Button Text
+            View More
           </span>
           <span className="relative invisible">View More</span>
         </Link>

@@ -3,6 +3,7 @@ import Slider from "../Components/Slider";
 import { useLoaderData } from "react-router";
 import Events from "../Components/Events";
 import Testimonials from "../Components/Testimonials";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const events = useLoaderData();
@@ -16,6 +17,9 @@ const Home = () => {
   console.log(textimonials);
   return (
     <div>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Slider></Slider>
 
       <Events events={events}></Events>
