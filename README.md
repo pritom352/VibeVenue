@@ -43,3 +43,21 @@ The main purpose of this project is to provide users with an interactive and res
   "tailwindcss": "^4.1.5"
 }
 ```
+
+### 📂 Clone the repository
+
+- `git clone https://github.com/pritom352/VibeVenue.git`
+
+### 🔐 Setup environment variables
+
+Create a `.env.local` file in the root directory and add the following:
+
+`VITE_apiKey=your_firebase_api_key`
+`VITE_authDomain=your_project.firebaseapp.com`
+`VITE_projectId=your_project_id`
+`VITE_storageBucket=your_project_storage_bucket`
+`VITE_messagingSenderId=your_messaging_sender_id`
+`VITE_appId=your_firebase_app_id`
+
+🚀 Run the frontend
+`npm run dev`
